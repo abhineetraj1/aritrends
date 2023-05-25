@@ -1,0 +1,3 @@
+docx2pdf
+qrcode
+pillow
