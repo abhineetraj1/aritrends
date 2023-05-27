@@ -18,14 +18,14 @@ pip3 install -r requirements.txt
 ### Convert Word file into pdf
 This code will convert word file into pdf file
 ```
-import aritrends as w
+from aritrends import aritrends as w
 w.convert("/path/to/folder/filename.docx")
 ```
 
 ### Convert multiple images to pdf
 This code will convert multiple image file (*.png) to pdf
 ```
-import aritrends as w
+from aritrends import aritrends as w
 list = ["/path/to/folder/image1.png","/path/to/folder/image2.png","/path/to/folder/image3.png"]
 w.image2pdf(list)
 ```
@@ -33,14 +33,14 @@ w.image2pdf(list)
 ### Generate qrcode
 This will generate qrcode of input text.
 ```
-import aritrends as w
+from aritrends import aritrends as w
 w.qrcode("Hello world !")
 ```
 
 ### Convert multiple files into zip
 This code will compress all files into zip
 ```
-import aritrends as w
+from aritrends import aritrends as w
 list = ["/path/to/folder/filename.exe","/path/to/folder/filename2.png","/path/to/folder/filename3.dart"]
 w.zip(list)
 ```
@@ -48,8 +48,24 @@ w.zip(list)
 ### Write text on image file (*.png)
 This code will save text on image.
 ```
-import aritrends as w
+from aritrends import aritrends as w
 w.write_text_on_image("Hello World","/path/to/folder/filename.png",["Arial",35])
+```
+
+## Compress files to rar
+This code will compress multiple files to *.rar
+```
+from aritrends import aritrends as w
+list = ["/path/to/folder/filename.exe","/path/to/folder/filename2.png","/path/to/folder/filename3.dart"]
+w.compress_to_rar(list, filename.rar)
+```
+
+## Compress files to 7z
+This code will compress multiple files to *.7z
+```
+from aritrends import aritrends as w
+list = ["/path/to/folder/filename.exe","/path/to/folder/filename2.png","/path/to/folder/filename3.dart"]
+w.compress_to_7z(list, filename.7z)
 ```
 
 ## Developer

@@ -4,6 +4,10 @@ import zipfile
 from datetime import datetime
 from PIL import Image
 import webbrowser
+import py7zr
+import rarfile
+import os
+
 
 def rnm():
     return datetime.now().strftime("%Y%m%d%H%M%S")
@@ -39,6 +43,16 @@ class aritrends:
     @staticmethod
     def open_github():
         webbrowser.open("http://github.com/abhineetraj1")
+    @staticmethod
+    def compress_to_7z(file_paths, output_path):
+        with py7zr.SevenZipFile(output_path + '.7z', 'w') as archive_7z:
+            for file_path in file_paths:
+                archive_7z.write(file_path, os.path.basename(file_path))
+    @staticmethod
+    def compress_to_rar(file_paths, output_path):
+        with rarfile.RarFile(output_path + '.rar', 'w') as archive_rar:
+            for file_path in file_paths:
+                archive_rar.write(file_path, os.path.basename(file_path))
     @staticmethod
     def show_credits():
         print("This project is developed by Abhineet Raj (GitHub: @abhineetraj1).")
