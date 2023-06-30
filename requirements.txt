@@ -3,3 +3,4 @@ qrcode
 pillow
 py7zr
 rarfile
+PyPDF2
