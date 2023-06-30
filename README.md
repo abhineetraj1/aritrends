@@ -68,6 +68,12 @@ list = ["/path/to/folder/filename.exe","/path/to/folder/filename2.png","/path/to
 w.compress_to_7z(list, filename.7z)
 ```
 
+## Merge 2 or more pdf(s) together
+```
+import aritrends
+aritrends.merge_pdfs(['file1.pdf', 'file2.pdf', 'file3.pdf'], 'merged.pdf')
+```
+
 ## Programming language used
 <a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" alt="Python" /></a>
 
