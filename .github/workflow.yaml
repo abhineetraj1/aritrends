@@ -1,0 +1,27 @@
+# Workload configuration file for aritrends project
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: aritrends-job
+
+spec:
+  # Configure the container to run
+  template:
+    spec:
+      containers:
+      - name: aritrends-container
+        image: your_image_name:latest  # Replace with your container image name
+        command: ["python", "main.py"]  # Replace with your main script
+
+      # Define resources required by the container
+      resources:
+        requests:
+          memory: "2Gi"
+          cpu: "1"
+        limits:
+          memory: "4Gi"
+          cpu: "2"
+
+  # Configure job execution
+  backoffLimit: 4  # Number of times to retry the job if it fails
